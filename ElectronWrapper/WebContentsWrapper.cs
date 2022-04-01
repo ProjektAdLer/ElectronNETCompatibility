@@ -180,10 +180,5 @@ namespace ElectronWrapper
         {
             webContents.InsertCSS(isBrowserWindow, path);
         }
-
-
-
-
-
     }
 }

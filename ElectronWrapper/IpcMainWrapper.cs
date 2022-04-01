@@ -92,10 +92,5 @@ namespace ElectronWrapper
         {
             ipcMain.Send(browserView, channel, data);
         }
-
-
-
-
-
     }
 }

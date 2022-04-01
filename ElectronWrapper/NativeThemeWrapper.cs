@@ -134,7 +134,5 @@ namespace ElectronWrapper
                 nativeTheme.Updated -= value;
             }
         }
-
-
     }
 }

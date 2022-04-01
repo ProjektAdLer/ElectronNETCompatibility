@@ -8,11 +8,9 @@ using ElectronNET.API.Entities;
 
 namespace ElectronWrapper
 {
-
-
-        class WindowManagerWraper : IWindowManagerWraper
+    class WindowManagerWraper : IWindowManagerWraper
     { 
-           private WindowManager windowManager;
+        private WindowManager windowManager;
 
         public WindowManagerWraper()
         {
@@ -93,8 +91,5 @@ namespace ElectronWrapper
         {
             return windowManager.CreateBrowserViewAsync(options);
         }
-
-
-
     }
 }

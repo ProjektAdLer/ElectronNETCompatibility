@@ -264,7 +264,7 @@ namespace ElectronWrapper
             }
             set
             {
-                app.Name = value; ;
+                app.Name = value;
             }
         }
 

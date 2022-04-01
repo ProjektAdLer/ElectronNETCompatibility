@@ -295,8 +295,5 @@ namespace ElectronWrapper
         {
             return session.LoadExtensionAsync(path, allowFileAccess);
         }
-
-
-
     }
 }

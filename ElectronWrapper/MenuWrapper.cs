@@ -71,7 +71,5 @@ namespace ElectronWrapper
         {
             menu.ContextMenuPopup(browserWindow);
         }
-
-
     }
 }

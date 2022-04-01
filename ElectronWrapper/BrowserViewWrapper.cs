@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 namespace ElectronWrapper
 {
-	
-
 	/// <summary>
 	/// A BrowserView can be used to embed additional web content into a BrowserWindow. 
 	/// It is like a child window, except that it is positioned relative to its owning window. 
@@ -28,7 +26,6 @@ namespace ElectronWrapper
 
 			browserView = tmp.Result;
 		}
-
 
 
         private BrowserView browserView;

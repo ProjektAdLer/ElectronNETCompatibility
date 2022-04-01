@@ -10,5 +10,5 @@ namespace ElectronWrapper
     {
         //Die Klasse ist Internal
 
-        }
+    }
 }

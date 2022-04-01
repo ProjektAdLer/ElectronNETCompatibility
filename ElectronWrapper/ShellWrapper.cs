@@ -102,8 +102,5 @@ namespace ElectronWrapper
         {
             return shell.ReadShortcutLinkAsync(shortcutPath);
         }
-
-
     }
-
 }

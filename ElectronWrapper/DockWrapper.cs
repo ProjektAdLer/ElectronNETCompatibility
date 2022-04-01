@@ -134,12 +134,5 @@ namespace ElectronWrapper
         {
             dock.SetIcon(image);
         }
-
-
-
     }
-
-
-
-
 }

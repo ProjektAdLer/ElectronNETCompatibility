@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ElectronWrapper
 {
-
     class WebHostBuilderExtensionsWrapper : IWebHostBuilderExtensionsWrapper
     {
         /// <summary>
@@ -22,7 +21,5 @@ namespace ElectronWrapper
         {
             return ElectronNET.API.WebHostBuilderExtensions.UseElectron(builder, args);
         }
-
-
     }
 }
