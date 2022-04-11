@@ -1,7 +1,6 @@
-﻿namespace ElectronWrapper
+﻿namespace ElectronWrapper;
+
+interface IBridgeSettingsWrapper
 {
-    interface IBridgeSettingsWrapper
-    {
-        string SocketPort { get; }
-    }
+    string SocketPort { get; }
 }

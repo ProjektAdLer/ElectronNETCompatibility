@@ -2,17 +2,16 @@
 using System;
 using System.Threading.Tasks;
 
-namespace ElectronWrapper
+namespace ElectronWrapper;
+
+interface ICookiesWrapper
 {
-    interface ICookiesWrapper
-    {
-        int Id { get; }
+    int Id { get; }
 
-        event Action<Cookie, CookieChangedCause, bool> OnChanged;
+    event Action<Cookie, CookieChangedCause, bool> OnChanged;
 
-        Task FlushStoreAsync();
-        Task<Cookie[]> GetAsync(CookieFilter filter);
-        Task RemoveAsync(string url, string name);
-        Task SetAsync(CookieDetails details);
-    }
+    Task FlushStoreAsync();
+    Task<Cookie[]> GetAsync(CookieFilter filter);
+    Task RemoveAsync(string url, string name);
+    Task SetAsync(CookieDetails details);
 }

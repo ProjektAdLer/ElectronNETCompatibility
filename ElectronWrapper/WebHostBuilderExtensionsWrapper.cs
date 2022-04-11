@@ -1,25 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ElectronNET.API;
-using ElectronNET.API.Entities;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 
-namespace ElectronWrapper
+namespace ElectronWrapper;
+
+class WebHostBuilderExtensionsWrapper : IWebHostBuilderExtensionsWrapper
 {
-    class WebHostBuilderExtensionsWrapper : IWebHostBuilderExtensionsWrapper
+    /// <summary>
+    /// Use a Electron support for this .NET Core Project.
+    /// </summary>
+    /// <param name="builder">The builder.</param>
+    /// <param name="args">The arguments.</param>
+    /// <returns></returns>
+    public IWebHostBuilder UseElectron(IWebHostBuilder builder, string[] args)
     {
-        /// <summary>
-        /// Use a Electron support for this .NET Core Project.
-        /// </summary>
-        /// <param name="builder">The builder.</param>
-        /// <param name="args">The arguments.</param>
-        /// <returns></returns>
-        public IWebHostBuilder UseElectron(IWebHostBuilder builder, string[] args)
-        {
-            return ElectronNET.API.WebHostBuilderExtensions.UseElectron(builder, args);
-        }
+        return ElectronNET.API.WebHostBuilderExtensions.UseElectron(builder, args);
     }
 }

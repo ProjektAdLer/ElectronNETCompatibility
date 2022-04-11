@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ElectronNET.API;
+﻿using System.Threading.Tasks;
 using ElectronNET.API.Entities;
 
-namespace ElectronWrapper
+namespace ElectronWrapper;
+
+interface INotificationWrapper
 {
-    interface INotificationWrapper
-    {
-        void Show(NotificationOptions notificationOptions);
-        Task<bool> IsSupportedAsync();
-    }
+    void Show(NotificationOptions notificationOptions);
+    Task<bool> IsSupportedAsync();
 }
