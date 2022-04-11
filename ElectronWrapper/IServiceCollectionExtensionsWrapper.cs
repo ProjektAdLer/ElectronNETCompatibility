@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace ElectronWrapper
+namespace ElectronWrapper;
+
+interface IServiceCollectionExtensionsWrapper
 {
-    interface IServiceCollectionExtensionsWrapper
-    {
-        IServiceCollection AddElectron(IServiceCollection services);
-    }
+    IServiceCollection AddElectron(IServiceCollection services);
 }

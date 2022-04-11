@@ -1,15 +1,14 @@
 ﻿using System;
 
-namespace ElectronWrapper
+namespace ElectronWrapper;
+
+interface IPowerMonitorWrapper
 {
-    interface IPowerMonitorWrapper
-    {
-        event Action OnAC;
-        event Action OnBattery;
-        event Action OnLockScreen;
-        event Action OnResume;
-        event Action OnShutdown;
-        event Action OnSuspend;
-        event Action OnUnLockScreen;
-    }
+    event Action OnAC;
+    event Action OnBattery;
+    event Action OnLockScreen;
+    event Action OnResume;
+    event Action OnShutdown;
+    event Action OnSuspend;
+    event Action OnUnLockScreen;
 }

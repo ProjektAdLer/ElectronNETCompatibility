@@ -1,33 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
 
-namespace ElectronWrapper
+namespace ElectronWrapper;
+
+class NotificationWrapper
 {
-    class NotificationWrapper
+    Notification notification;
+
+    /// <summary>
+    /// Create OS desktop notifications
+    /// </summary>
+    /// <param name="notificationOptions"></param>
+    public void Show(NotificationOptions notificationOptions)
     {
-        Notification notification;
+        notification.Show(notificationOptions);
+    }
 
-        /// <summary>
-        /// Create OS desktop notifications
-        /// </summary>
-        /// <param name="notificationOptions"></param>
-        public void Show(NotificationOptions notificationOptions)
-        {
-            notification.Show(notificationOptions);
-        }
-
-        /// <summary>
-        /// Whether or not desktop notifications are supported on the current system.
-        /// </summary>
-        /// <returns></returns>
-        public Task<bool> IsSupportedAsync()
-        {
-            return notification.IsSupportedAsync();
-        }
+    /// <summary>
+    /// Whether or not desktop notifications are supported on the current system.
+    /// </summary>
+    /// <returns></returns>
+    public Task<bool> IsSupportedAsync()
+    {
+        return notification.IsSupportedAsync();
     }
 }

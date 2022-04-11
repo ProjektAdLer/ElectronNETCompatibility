@@ -1,10 +1,9 @@
 ﻿using System.Threading.Tasks;
 
-namespace ElectronWrapper
+namespace ElectronWrapper;
+
+interface IHostHookWrapper
 {
-    interface IHostHookWrapper
-    {
-        void Call(string socketEventName, params dynamic[] arguments);
-        Task<T> CallAsync<T>(string socketEventName, params dynamic[] arguments);
-    }
+    void Call(string socketEventName, params dynamic[] arguments);
+    Task<T> CallAsync<T>(string socketEventName, params dynamic[] arguments);
 }

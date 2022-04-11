@@ -1,7 +1,6 @@
-﻿namespace ElectronWrapper
+﻿namespace ElectronWrapper;
+
+interface IQuitEventArgsWrapper
 {
-    interface IQuitEventArgsWrapper
-    {
-        void PreventDefault();
-    }
+    void PreventDefault();
 }
