@@ -4,9 +4,14 @@ using ElectronNET.API.Entities;
 
 namespace ElectronWrapper;
 
-class NotificationWrapper
+class NotificationWrapper : INotificationWrapper
 {
     Notification notification;
+
+    public NotificationWrapper()
+    {
+        notification = Electron.Notification;
+    }
 
     /// <summary>
     /// Create OS desktop notifications

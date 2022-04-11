@@ -11,6 +11,11 @@ class GlobalShortcutWrapper : IGlobalShortcutWrapper
 {
     private GlobalShortcut globalShortcut;
 
+    public GlobalShortcutWrapper()
+    {
+        globalShortcut = Electron.GlobalShortcut;
+    }
+
     /// <summary>
     /// Registers a global shortcut of accelerator. 
     /// The callback is called when the registered shortcut is pressed by the user.

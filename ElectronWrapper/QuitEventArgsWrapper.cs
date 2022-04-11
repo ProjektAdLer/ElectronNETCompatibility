@@ -8,6 +8,11 @@ namespace ElectronWrapper;
 class QuitEventArgsWrapper : IQuitEventArgsWrapper
 {
     private QuitEventArgs quitEventArgs;
+
+    public QuitEventArgsWrapper(ElectronNET.API.QuitEventArgs args)
+    {
+        quitEventArgs = args;
+    }
     /// <summary>
     /// Will prevent the default behaviour, which is terminating the application.
     /// </summary>

@@ -6,6 +6,10 @@ namespace ElectronWrapper;
 
 class DialogWrapper: IDialogWrapper
 {
+    public DialogWrapper()
+    {
+        dialog = Electron.Dialog;
+    }
     private Dialog dialog;
 
     /// <summary>
@@ -82,7 +86,7 @@ class DialogWrapper: IDialogWrapper
     /// <returns>The API call will be asynchronous and the result will be passed via MessageBoxResult.</returns>
     public Task<MessageBoxResult> ShowMessageBoxAsync(BrowserWindow browserWindow, MessageBoxOptions messageBoxOptions)
     {
-        return ShowMessageBoxAsync(browserWindow, messageBoxOptions);
+        return dialog.ShowMessageBoxAsync(browserWindow, messageBoxOptions);
     }
     /// <summary>
     /// Displays a modal dialog that shows an error message.
