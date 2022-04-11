@@ -4,7 +4,7 @@ using ElectronNET.API.Entities;
 
 namespace ElectronWrapper;
 
-interface IDialogWrapper
+public interface IDialogWrapper
 {
     Task<string[]> ShowOpenDialogAsync(BrowserWindow browserWindow, OpenDialogOptions options);
     Task<string> ShowSaveDialogAsync(BrowserWindow browserWindow, SaveDialogOptions options);

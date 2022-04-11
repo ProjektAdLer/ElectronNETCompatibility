@@ -1,6 +1,6 @@
 ﻿namespace ElectronWrapper;
 
-interface IHybridSupportWrapper
+public interface IHybridSupportWrapper
 {
     bool IsElectronActive { get; }
 }

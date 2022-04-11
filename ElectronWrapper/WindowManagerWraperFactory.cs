@@ -1,6 +1,6 @@
 ﻿interface IWindowManagerWraperFactory
 {
-    ElectronWrapper.WindowManagerWraper Create();
+    ElectronWrapper.WindowManagerWrapper Create();
 }
 
 namespace ElectronWrapper
@@ -8,6 +8,6 @@ namespace ElectronWrapper
     class WindowManagerWraperFactory : IWindowManagerWraperFactory
     {
 
-        public WindowManagerWraper Create() { return new WindowManagerWraper(); }
+        public WindowManagerWrapper Create() { return new WindowManagerWrapper(); }
     }
 }

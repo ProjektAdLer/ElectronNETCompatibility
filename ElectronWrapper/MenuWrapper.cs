@@ -56,7 +56,7 @@ class MenuWrapper: IMenuWrapper
     /// <param name="menuItems">The menu items.</param>
     public void SetContextMenu(BrowserWindow browserWindow, MenuItem[] menuItems)
     {
-        menu.SetContextMenu(browserWindow, menuItems);
+        menu.SetContextMenu(browserWindow._innerBrowserWindow, menuItems);
     }
 
     /// <summary>
@@ -65,6 +65,6 @@ class MenuWrapper: IMenuWrapper
     /// <param name="browserWindow">The browser window.</param>
     public void ContextMenuPopup(BrowserWindow browserWindow)
     {
-        menu.ContextMenuPopup(browserWindow);
+        menu.ContextMenuPopup(browserWindow._innerBrowserWindow);
     }
 }

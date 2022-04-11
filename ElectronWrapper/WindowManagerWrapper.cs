@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
 
 namespace ElectronWrapper;
 
-class WindowManagerWraper : IWindowManagerWraper
+class WindowManagerWrapper : IWindowManagerWrapper
 { 
     private WindowManager windowManager;
 
-    public WindowManagerWraper()
+    public WindowManagerWrapper()
     {
         windowManager = Electron.WindowManager;
     }
@@ -32,7 +33,8 @@ class WindowManagerWraper : IWindowManagerWraper
     /// <value>
     /// The browser windows.
     /// </value>
-    public IReadOnlyCollection<BrowserWindow> BrowserWindows => windowManager.BrowserWindows;
+    public IReadOnlyCollection<BrowserWindow> BrowserWindows =>
+        windowManager.BrowserWindows.Select(bw => new BrowserWindow(bw)).ToList().AsReadOnly();
 
     /// <summary>
     /// Gets the browser views.
@@ -49,7 +51,8 @@ class WindowManagerWraper : IWindowManagerWraper
     /// <returns></returns>
     public async Task<BrowserWindow> CreateWindowAsync(string loadUrl = "http://localhost")
     {
-        return await windowManager.CreateWindowAsync(loadUrl);
+        var innerBrowserWindow = await windowManager.CreateWindowAsync(loadUrl);
+        return new BrowserWindow(innerBrowserWindow);
     }
 
     /// <summary>
@@ -58,9 +61,10 @@ class WindowManagerWraper : IWindowManagerWraper
     /// <param name="options">The options.</param>
     /// <param name="loadUrl">The load URL.</param>
     /// <returns></returns>
-    public Task<BrowserWindow> CreateWindowAsync(BrowserWindowOptions options, string loadUrl = "http://localhost")
+    public async Task<BrowserWindow> CreateWindowAsync(BrowserWindowOptions options, string loadUrl = "http://localhost")
     {
-        return windowManager.CreateWindowAsync(options, loadUrl);
+        var innerBrowserWindow = await windowManager.CreateWindowAsync(options, loadUrl);
+        return new BrowserWindow(innerBrowserWindow);
     }
 
     /// <summary>

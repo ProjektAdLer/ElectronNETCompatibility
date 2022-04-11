@@ -2,7 +2,7 @@
 
 namespace ElectronWrapper;
 
-class HybridSupportWrapper : IHybridSupportWrapper
+public class HybridSupportWrapper : IHybridSupportWrapper
 {
     /// <summary>
     /// Gets a value indicating whether this instance is electron active.

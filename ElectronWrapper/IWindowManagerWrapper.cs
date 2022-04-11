@@ -5,7 +5,7 @@ using ElectronNET.API.Entities;
 
 namespace ElectronWrapper;
 
-public interface IWindowManagerWraper
+public interface IWindowManagerWrapper
 {
     bool IsQuitOnWindowAllClosed { get; set; }
     IReadOnlyCollection<BrowserWindow> BrowserWindows { get; }
