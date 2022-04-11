@@ -8,8 +8,6 @@ using ElectronNET.API.Entities;
 
 namespace ElectronWrapper
 {
-
-
     class DialogWrapper: IDialogWrapper
     {
         private Dialog dialog;

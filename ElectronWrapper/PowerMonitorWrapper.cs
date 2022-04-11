@@ -129,9 +129,5 @@ namespace ElectronWrapper
                 powerMonitor.OnShutdown -= value;
             }
         }
-
-
-
-
     }
 }

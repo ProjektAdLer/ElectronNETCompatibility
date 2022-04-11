@@ -20,6 +20,5 @@ namespace ElectronWrapper
         {
             quitEventArgs.PreventDefault();
         }
-
     }
 }

@@ -124,7 +124,5 @@ namespace ElectronWrapper
         {
             return screen.GetDisplayMatchingAsync(rectangle);
         }
-
-
     }
 }

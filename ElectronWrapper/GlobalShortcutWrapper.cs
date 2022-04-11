@@ -47,7 +47,6 @@ namespace ElectronWrapper
             globalShortcut.Unregister(accelerator);
         }
 
-
         /// <summary>
         /// Unregisters all of the global shortcuts.
         /// </summary>
@@ -55,7 +54,5 @@ namespace ElectronWrapper
         {
             globalShortcut.UnregisterAll();
         }
-
-
     }
 }

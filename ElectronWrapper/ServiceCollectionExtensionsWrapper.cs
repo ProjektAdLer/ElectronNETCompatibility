@@ -19,6 +19,5 @@ namespace ElectronWrapper
         {
             return ServiceCollectionExtensions.AddElectron(services);
         }
-
     }
 }

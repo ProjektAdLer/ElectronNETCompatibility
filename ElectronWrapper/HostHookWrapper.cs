@@ -45,9 +45,5 @@ namespace ElectronWrapper
         {
             return hostHook.CallAsync<T>(socketEventName, arguments);
         }
-
-
-
-
     }
 }

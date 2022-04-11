@@ -91,17 +91,5 @@ namespace ElectronWrapper
         {
             return cookies.FlushStoreAsync();
         }
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

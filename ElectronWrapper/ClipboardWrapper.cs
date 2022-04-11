@@ -183,6 +183,5 @@ namespace ElectronWrapper
         {
             clipboard.WriteImage(image, type);
         }
-
     }
 }

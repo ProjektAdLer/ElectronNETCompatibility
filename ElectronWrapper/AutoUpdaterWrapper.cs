@@ -323,13 +323,5 @@ namespace ElectronWrapper
 
             return autoUpdater.GetFeedURLAsync();
         }
-
-
-
-
-
-
-
-
     }
 }

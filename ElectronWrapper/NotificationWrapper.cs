@@ -8,7 +8,6 @@ using ElectronNET.API.Entities;
 
 namespace ElectronWrapper
 {
-  
     class NotificationWrapper
     {
         Notification notification;
@@ -30,8 +29,5 @@ namespace ElectronWrapper
         {
             return notification.IsSupportedAsync();
         }
-
-
-
     }
 }
