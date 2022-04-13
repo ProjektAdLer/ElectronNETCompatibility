@@ -6,7 +6,7 @@ public class SaveDialogOptions
 {
     public SaveDialogOptions()
     {
-        
+        _innerSaveDialogOptions = new ElectronNET.API.SaveDialogOptions();
     }
 
     internal SaveDialogOptions(ElectronNET.API.SaveDialogOptions innerSaveDialogOptions)
