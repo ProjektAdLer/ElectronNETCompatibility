@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElectronWrapper;
 
-interface IAppWrapper
+public interface IAppWrapper
 {
     CommandLine CommandLine { get; }
     bool IsReady { get; }

@@ -1,3 +1,6 @@
+using System;
+using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
@@ -23,6 +26,7 @@ public static class StartupExtensions
     {
         services.AddSingleton<IWindowManagerWrapper, WindowManagerWrapper>();
         services.AddSingleton<IDialogWrapper, DialogWrapper>();
+        services.AddSingleton<IAppWrapper, AppWrapper>();
         return services;
     }
 
@@ -34,12 +38,16 @@ public static class StartupExtensions
                 var options = new BrowserWindowOptions
                 {
                     Fullscreenable = true,
+                    //Setting closable will only prevent clicking the close button on Windows and macOS, not on Linux.
+                    //This is an Electron limitation, and we need to instead warn users about the fact that they should NOT
+                    //close the window using the close button and instead use our applications close button.
+                    Closable = false,
                 };
                 return await Electron.WindowManager.CreateWindowAsync(options);
             });
         
         //exit app on all windows closed
-        Electron.App.WindowAllClosed += () => Electron.App.Exit();
+        Electron.App.WindowAllClosed += () => Electron.App.Quit();
         return appBuilder;
     }
 
