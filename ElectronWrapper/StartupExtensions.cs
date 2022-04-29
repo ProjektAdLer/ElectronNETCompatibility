@@ -42,6 +42,10 @@ public static class StartupExtensions
                     //This is an Electron limitation, and we need to instead warn users about the fact that they should NOT
                     //close the window using the close button and instead use our applications close button.
                     Closable = false,
+                    Height = 800,
+                    MinHeight = 800,
+                    Width = 1200,
+                    MinWidth = 1200,
                 };
                 return await Electron.WindowManager.CreateWindowAsync(options);
             });
