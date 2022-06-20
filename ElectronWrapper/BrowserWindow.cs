@@ -9,9 +9,9 @@ public class BrowserWindow
 
     internal BrowserWindow(ElectronNET.API.BrowserWindow innerBrowserWindow)
     {
-        _innerBrowserWindow = innerBrowserWindow;
+        InnerBrowserWindow = innerBrowserWindow;
     }
     
-    internal ElectronNET.API.BrowserWindow? _innerBrowserWindow { get; }
+    internal ElectronNET.API.BrowserWindow? InnerBrowserWindow { get; }
     
 }

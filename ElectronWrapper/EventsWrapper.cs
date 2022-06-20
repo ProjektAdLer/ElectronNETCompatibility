@@ -1,3 +1,1 @@
-﻿namespace ElectronWrapper;
-
-//Events ist eine Internal Klasse
+﻿//Events ist eine Internal Klasse

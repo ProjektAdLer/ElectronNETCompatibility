@@ -42,7 +42,7 @@ class ClipboardWrapper : IClipboardWrapper
     /// </summary>
     /// <param name="type"></param>
     /// <returns></returns>
-    public Task<string> ReadHTMLAsync(string type = "")
+    public Task<string> ReadHtmlAsync(string type = "")
     {
         return clipboard.ReadHTMLAsync(type);
     }
@@ -52,7 +52,7 @@ class ClipboardWrapper : IClipboardWrapper
     /// </summary>
     /// <param name="markup"></param>
     /// <param name="type"></param>
-    public void WriteHTML(string markup, string type = "")
+    public void WriteHtml(string markup, string type = "")
     {
         clipboard.WriteHTML(markup, type);
     }
@@ -62,7 +62,7 @@ class ClipboardWrapper : IClipboardWrapper
     /// </summary>
     /// <param name="type"></param>
     /// <returns></returns>
-    public Task<string> ReadRTFAsync(string type = "")
+    public Task<string> ReadRtfAsync(string type = "")
     {
         return clipboard.ReadRTFAsync(type);
     }
@@ -74,7 +74,7 @@ class ClipboardWrapper : IClipboardWrapper
     /// </summary>
     /// <param name="text"></param>
     /// <param name="type"></param>
-    public void WriteRTF(string text, string type = "")
+    public void WriteRtf(string text, string type = "")
     {
         clipboard.WriteRTF(text, type);
     }

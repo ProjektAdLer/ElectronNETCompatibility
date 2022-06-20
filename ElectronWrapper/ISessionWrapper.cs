@@ -9,7 +9,7 @@ interface ISessionWrapper
     Cookies Cookies { get; }
     int Id { get; }
 
-    void AllowNTLMCredentialsForDomains(string domains);
+    void AllowNtlmCredentialsForDomains(string domains);
     Task ClearAuthCacheAsync();
     Task ClearAuthCacheAsync(RemovePassword options);
     Task ClearCacheAsync();

@@ -40,7 +40,7 @@ class SessionWrapper : ISessionWrapper
     /// Dynamically sets whether to always send credentials for HTTP NTLM or Negotiate authentication.
     /// </summary>
     /// <param name="domains">A comma-separated list of servers for which integrated authentication is enabled.</param>
-    public void AllowNTLMCredentialsForDomains(string domains)
+    public void AllowNtlmCredentialsForDomains(string domains)
     {
         session.AllowNTLMCredentialsForDomains(domains);
     }

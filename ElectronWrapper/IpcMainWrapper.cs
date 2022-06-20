@@ -70,7 +70,7 @@ class IpcMainWrapper : IIpcMainWrapper
     /// <param name="data">Arguments data.</param>
     public void Send(BrowserWindow browserWindow, string channel, params object[] data)
     {
-        ipcMain.Send(browserWindow._innerBrowserWindow, channel, data);
+        ipcMain.Send(browserWindow.InnerBrowserWindow, channel, data);
 
     }
 

@@ -210,7 +210,7 @@ class AutoUpdaterWrapper : IAutoUpdaterWrapper
     /// Feed URL.
     /// </summary>
     /// <returns>Feed URL.</returns>
-    public Task<string> GetFeedURLAsync()
+    public Task<string> GetFeedUrlAsync()
     {
         return autoUpdater.GetFeedURLAsync();
     }

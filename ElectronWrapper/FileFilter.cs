@@ -4,24 +4,24 @@ public class FileFilter
 {
     public FileFilter()
     {
-        _innerFileFilter = new ElectronNET.API.Entities.FileFilter();
+        InnerFileFilter = new ElectronNET.API.Entities.FileFilter();
     }
 
     internal FileFilter(ElectronNET.API.Entities.FileFilter innerFileFilter)
     {
-        _innerFileFilter = innerFileFilter;
+        InnerFileFilter = innerFileFilter;
     }
-    internal ElectronNET.API.Entities.FileFilter _innerFileFilter { get; }
+    internal ElectronNET.API.Entities.FileFilter InnerFileFilter { get; }
 
     public string[] Extensions
     {
-        get => _innerFileFilter.Extensions;
-        set => _innerFileFilter.Extensions = value;
+        get => InnerFileFilter.Extensions;
+        set => InnerFileFilter.Extensions = value;
     }
 
     public string Name
     {
-        get => _innerFileFilter.Name;
-        set => _innerFileFilter.Name = value;
+        get => InnerFileFilter.Name;
+        set => InnerFileFilter.Name = value;
     }
 }

@@ -9,7 +9,7 @@ class QuitEventArgsWrapper : IQuitEventArgsWrapper
 {
     private QuitEventArgs quitEventArgs;
 
-    public QuitEventArgsWrapper(ElectronNET.API.QuitEventArgs args)
+    public QuitEventArgsWrapper(QuitEventArgs args)
     {
         quitEventArgs = args;
     }

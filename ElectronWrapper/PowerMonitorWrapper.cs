@@ -56,7 +56,7 @@ class PowerMonitorWrapper : IPowerMonitorWrapper
     /// <summary>
     /// Emitted when the system changes to AC power.
     /// </summary>
-    public event Action OnAC
+    public event Action OnAc
     {
         add => powerMonitor.OnAC += value;
         remove => powerMonitor.OnAC -= value;

@@ -15,11 +15,11 @@ interface IWebContentsWrapper
 
     Task<PrinterInfo[]> GetPrintersAsync();
     Task<string> GetUrl();
-    void InsertCSS(bool isBrowserWindow, string path);
-    Task LoadURLAsync(string url);
-    Task LoadURLAsync(string url, LoadURLOptions options);
+    void InsertCss(bool isBrowserWindow, string path);
+    Task LoadUrlAsync(string url);
+    Task LoadUrlAsync(string url, LoadURLOptions options);
     void OpenDevTools();
     void OpenDevTools(OpenDevToolsOptions openDevToolsOptions);
-    Task<bool> PrintAsync(PrintOptions options = null);
-    Task<bool> PrintToPDFAsync(string path, PrintToPDFOptions options = null);
+    Task<bool> PrintAsync(PrintOptions? options = null);
+    Task<bool> PrintToPdfAsync(string path, PrintToPDFOptions? options = null);
 }

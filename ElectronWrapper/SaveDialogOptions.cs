@@ -6,37 +6,37 @@ public class SaveDialogOptions
 {
     public SaveDialogOptions()
     {
-        _innerSaveDialogOptions = new ElectronNET.API.SaveDialogOptions();
+        InnerSaveDialogOptions = new ElectronNET.API.SaveDialogOptions();
     }
 
     internal SaveDialogOptions(ElectronNET.API.SaveDialogOptions innerSaveDialogOptions)
     {
-        _innerSaveDialogOptions = innerSaveDialogOptions;
+        InnerSaveDialogOptions = innerSaveDialogOptions;
     }
     
-    internal readonly ElectronNET.API.SaveDialogOptions _innerSaveDialogOptions;
+    internal readonly ElectronNET.API.SaveDialogOptions InnerSaveDialogOptions;
 
     public string Title
     {
-        get => _innerSaveDialogOptions.Title;
-        set => _innerSaveDialogOptions.Title = value;
+        get => InnerSaveDialogOptions.Title;
+        set => InnerSaveDialogOptions.Title = value;
     }
 
     public string DefaultPath
     {
-        get => _innerSaveDialogOptions.DefaultPath;
-        set => _innerSaveDialogOptions.DefaultPath = value;
+        get => InnerSaveDialogOptions.DefaultPath;
+        set => InnerSaveDialogOptions.DefaultPath = value;
     }
 
     public string ButtonLabel
     {
-        get => _innerSaveDialogOptions.ButtonLabel;
-        set => _innerSaveDialogOptions.ButtonLabel = value;
+        get => InnerSaveDialogOptions.ButtonLabel;
+        set => InnerSaveDialogOptions.ButtonLabel = value;
     }
 
     public FileFilter[] Filters
     {
-        get => _innerSaveDialogOptions.Filters.Select(f => new FileFilter(f)).ToArray();
-        set => _innerSaveDialogOptions.Filters = value.Select(f => f._innerFileFilter).ToArray();
+        get => InnerSaveDialogOptions.Filters.Select(f => new FileFilter(f)).ToArray();
+        set => InnerSaveDialogOptions.Filters = value.Select(f => f.InnerFileFilter).ToArray();
     }
 }

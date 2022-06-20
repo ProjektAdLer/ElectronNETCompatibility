@@ -29,6 +29,6 @@ interface IAutoUpdaterWrapper
     Task<UpdateCheckResult> CheckForUpdatesAndNotifyAsync();
     Task<UpdateCheckResult> CheckForUpdatesAsync();
     Task<string> DownloadUpdateAsync();
-    Task<string> GetFeedURLAsync();
+    Task<string> GetFeedUrlAsync();
     void QuitAndInstall(bool isSilent = false, bool isForceRunAfter = false);
 }

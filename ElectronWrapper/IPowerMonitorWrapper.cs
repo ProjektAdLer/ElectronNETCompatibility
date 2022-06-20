@@ -4,7 +4,7 @@ namespace ElectronWrapper;
 
 interface IPowerMonitorWrapper
 {
-    event Action OnAC;
+    event Action OnAc;
     event Action OnBattery;
     event Action OnLockScreen;
     event Action OnResume;

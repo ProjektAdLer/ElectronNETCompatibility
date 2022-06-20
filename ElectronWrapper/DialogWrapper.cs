@@ -22,7 +22,7 @@ class DialogWrapper: IDialogWrapper
     /// <returns>An array of file paths chosen by the user</returns>
     public Task<string[]> ShowOpenDialogAsync(BrowserWindow browserWindow, OpenDialogOptions options)
     {
-        return dialog.ShowOpenDialogAsync(browserWindow._innerBrowserWindow, options._innerOpenDialogOptions);
+        return dialog.ShowOpenDialogAsync(browserWindow.InnerBrowserWindow, options.InnerOpenDialogOptions);
     }
     /// <summary>
     /// Dialog for save files.
@@ -32,7 +32,7 @@ class DialogWrapper: IDialogWrapper
     /// <returns>Returns String, the path of the file chosen by the user, if a callback is provided it returns an empty string.</returns>
     public Task<string> ShowSaveDialogAsync(BrowserWindow browserWindow, SaveDialogOptions options)
     {
-        return dialog.ShowSaveDialogAsync(browserWindow._innerBrowserWindow, options._innerSaveDialogOptions);
+        return dialog.ShowSaveDialogAsync(browserWindow.InnerBrowserWindow, options.InnerSaveDialogOptions);
     }
 
     /// <summary>
@@ -73,7 +73,7 @@ class DialogWrapper: IDialogWrapper
     /// <returns>The API call will be asynchronous and the result will be passed via MessageBoxResult.</returns>
     public async Task<MessageBoxResult> ShowMessageBoxAsync(BrowserWindow browserWindow, string message)
     {
-        return await dialog.ShowMessageBoxAsync(browserWindow._innerBrowserWindow, message);
+        return await dialog.ShowMessageBoxAsync(browserWindow.InnerBrowserWindow, message);
     }
 
     /// <summary>
@@ -86,7 +86,7 @@ class DialogWrapper: IDialogWrapper
     /// <returns>The API call will be asynchronous and the result will be passed via MessageBoxResult.</returns>
     public Task<MessageBoxResult> ShowMessageBoxAsync(BrowserWindow browserWindow, MessageBoxOptions messageBoxOptions)
     {
-        return dialog.ShowMessageBoxAsync(browserWindow._innerBrowserWindow, messageBoxOptions);
+        return dialog.ShowMessageBoxAsync(browserWindow.InnerBrowserWindow, messageBoxOptions);
     }
     /// <summary>
     /// Displays a modal dialog that shows an error message.
@@ -125,7 +125,7 @@ class DialogWrapper: IDialogWrapper
     /// <returns></returns>
     public Task ShowCertificateTrustDialogAsync(BrowserWindow browserWindow, CertificateTrustDialogOptions options)
     {
-        return dialog.ShowCertificateTrustDialogAsync(browserWindow._innerBrowserWindow, options);
+        return dialog.ShowCertificateTrustDialogAsync(browserWindow.InnerBrowserWindow, options);
     }
 
 

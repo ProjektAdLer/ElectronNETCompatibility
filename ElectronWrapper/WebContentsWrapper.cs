@@ -88,7 +88,7 @@ class WebContentsWrapper : IWebContentsWrapper
     /// </summary>
     /// <param name="options"></param>
     /// <returns>success</returns>
-    public Task<bool> PrintAsync(PrintOptions options = null)
+    public Task<bool> PrintAsync(PrintOptions? options = null)
     {
         return webContents.PrintAsync(options);
     }
@@ -103,7 +103,7 @@ class WebContentsWrapper : IWebContentsWrapper
     /// <param name="path"></param>
     /// <param name="options"></param>
     /// <returns>success</returns>
-    public Task<bool> PrintToPDFAsync(string path, PrintToPDFOptions options = null)
+    public Task<bool> PrintToPdfAsync(string path, PrintToPDFOptions? options = null)
     {
         return webContents.PrintToPDFAsync(path, options);
     }
@@ -130,7 +130,7 @@ class WebContentsWrapper : IWebContentsWrapper
     /// `pragma` header to achieve it.
     /// </summary>
     /// <param name="url"></param>
-    public Task LoadURLAsync(string url)
+    public Task LoadUrlAsync(string url)
     {
         return webContents.LoadURLAsync(url);
     }
@@ -148,7 +148,7 @@ class WebContentsWrapper : IWebContentsWrapper
     /// </summary>
     /// <param name="url"></param>
     /// <param name="options"></param>
-    public Task LoadURLAsync(string url, LoadURLOptions options)
+    public Task LoadUrlAsync(string url, LoadURLOptions options)
     {
         return webContents.LoadURLAsync(url, options);
     }
@@ -160,7 +160,7 @@ class WebContentsWrapper : IWebContentsWrapper
     /// </summary>
     /// <param name="isBrowserWindow">Whether the webContents belong to a BrowserWindow or not (the other option is a BrowserView)</param>
     /// <param name="path">Absolute path to the CSS file location</param>
-    public void InsertCSS(bool isBrowserWindow, string path)
+    public void InsertCss(bool isBrowserWindow, string path)
     {
         webContents.InsertCSS(isBrowserWindow, path);
     }
