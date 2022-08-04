@@ -1,3 +1,4 @@
+using System.IO;
 using System.Threading.Tasks;
 using ElectronNET.API;
 using ElectronNET.API.Entities;
@@ -43,6 +44,7 @@ public static class StartupExtensions
                     MinHeight = 800,
                     Width = 1200,
                     MinWidth = 1200,
+                    Icon = Path.Join("wwwroot", "favicon.ico")
                 };
                 return await Electron.WindowManager.CreateWindowAsync(options);
             });
